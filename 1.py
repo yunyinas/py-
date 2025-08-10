@@ -1,15 +1,13 @@
-#-*-编码：utf-8-*-
-进口os
-进口sys
+importsys
 进口时间
 从……起datetimeimportdatetime
 
-定义show_start_info():
+def show_start_info():
     print("\033[1；32m小柒美化工具\033[0m")
-打印("\033[1；33m小柒官方频道@xqbnb\033[0m")
-打印("\033[1；34m小柒工具频道@XQ_TOOL\033[0m")
-start_time=日期时间。现在().strftime("%Y-%m-%d%H：%M：%S")  
-    print(F"启动时间-{开始时间(_T)}")
+    print("\033[1；33m小柒官方频道@xqbnb\033[0m")
+    print("\033[1；34m小柒工具频道@XQ_TOOL\033[0m")
+start_time=日期时间。现在().strftime("%Y-%m-%d%H：%M：%S")
+    print(F"启动时间-{start_time}")
     print(" /_/")
     print("(o.o)")
     print("> ^ <")
@@ -19,36 +17,34 @@ start_time=日期时间。现在().strftime("%Y-%m-%d%H：%M：%S")
     print("\033[1；31m0.退出\033[0m")
     print("\033[1;35m========================================\033[0m")
 
-def 输入工具(_T)():
+def enter_tool():
     print("\n===进入工具===")
     print("这里可以添加真正的工具功能逻辑，比如解包操作等...")
-时间。睡(2)
-    输入("按回车键返回主菜单...")
+时间。sleep(2)
+    input("按回车键返回主菜单...")
 
 def setup_environment():
     print("\n===搭建环境===")
     print("正在执行环境搭建流程...")
     print("假设这里完成了依赖安装、目录创建等操作")
-时间。睡(3)
-    输入("环境搭建完成，按回车键返回主菜单...")
+    time.sleep(3)
+    input("环境搭建完成，按回车键返回主菜单...")
 
 def main():
 在……期间 正确:
         show_start_info()
 选择=input("请输入您的选择 [0-2]: ")
-如果不选择或, 不在…… 内"2"]选择不选择或选择不
-            print("请输入 0、1 或 2 进行选择！")
-时间。睡(1)
-操作系统。系统('清除')
-继续
-如果选择=="1":
-            输入工具(_T)()
+ifchoice=="1":
+            enter_tool()
 Elifchoice=="2":
             setup_environment()
-Elifchoice=="0":
+        elif choice == "0":
             print("退出程序，再见！")
 sys.出口(0)
-操作系统。系统('清除')
+其他:
+            print("无效的选择，请重新输入！")
+时间。sleep(1)
+        print("\n" * 50)
 
-如果__姓名__=="__main__":
+if__name__=="__main__":
     main()
